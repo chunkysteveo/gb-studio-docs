@@ -6,6 +6,8 @@ Tilesets are used to provide additional tiles that can be used by your scenes us
 
 You can add tilesets to your game by including `.png` files in your project's `assets/tilesets` folder.
 
+Replace Tile event uses GBVM function `VM_REPLACE_TILE_XY` whose variable `START_IDX` is clamped between 0 and 255. As such - don't make your tileset images more than 256 8x8px tiles otherwise it will loop back to 0 when finding your new tile.
+
 ## Color Requirements
 
 Tileset PNGs must only contain the following four colors:
